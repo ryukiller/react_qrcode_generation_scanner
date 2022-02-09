@@ -8,8 +8,8 @@ import QRCode from "qrcode.react";
 function App() { 
   const [text, setText] = useState('');
   const [imageUrl, setImageUrl] = useState('');
-  const [scanResultFile, setScanResultFile] = useState('');
-  const [scanResultWebCam, setScanResultWebCam] =  useState('');
+  //const [scanResultFile, setScanResultFile] = useState('');
+  //const [scanResultWebCam, setScanResultWebCam] =  useState('');
   const classes = useStyles();
   const qrRef = useRef(null);
 
@@ -25,22 +25,7 @@ function App() {
   const handleErrorFile = (error) => {
     console.log(error);
   }
-  const handleScanFile = (result) => {
-      if (result) {
-          setScanResultFile(result);
-      }
-  }
-  const onScanFile = () => {
-    qrRef.current.openImageDialog();
-  }
-  const handleErrorWebCam = (error) => {
-    console.log(error);
-  }
-  const handleScanWebCam = (result) => {
-    if (result){
-        setScanResultWebCam(result);
-    }
-   }
+
   return (
     <Container className={classes.conatiner}>
           <Card>
