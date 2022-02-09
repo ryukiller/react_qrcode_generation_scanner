@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import {Container, Card, CardContent, makeStyles, Grid, TextField, Button} from '@material-ui/core';
-import QRCode from "qrcode.react";
+import QRCode from "qrcode";
 
 //import QrReader from 'react-qr-reader';
 
