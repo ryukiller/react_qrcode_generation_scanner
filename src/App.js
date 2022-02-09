@@ -1,7 +1,8 @@
 import React, {useState, useRef} from 'react';
 import {Container, Card, CardContent, makeStyles, Grid, TextField, Button} from '@material-ui/core';
-import QRCode from 'qrcode';
-import QrReader from 'react-qr-reader';
+import QRCode from "qrcode.react";
+
+//import QrReader from 'react-qr-reader';
 
 
 function App() { 
@@ -57,28 +58,6 @@ function App() {
                               <a href={imageUrl} download>
                                   <img src={imageUrl} alt="img"/>
                               </a>) : null}
-                      </Grid>
-                      <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-                        <Button className={classes.btn} variant="contained" color="secondary" onClick={onScanFile}>Scan Qr Code</Button>
-                        <QrReader
-                          ref={qrRef}
-                          delay={300}
-                          style={{width: '100%'}}
-                          onError={handleErrorFile}
-                          onScan={handleScanFile}
-                          legacyMode
-                        />
-                        <h3>Scanned Code: {scanResultFile}</h3>
-                      </Grid>
-                      <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-                         <h3>Qr Code Scan by Web Cam</h3>
-                         <QrReader
-                         delay={300}
-                         style={{width: '100%'}}
-                         onError={handleErrorWebCam}
-                         onScan={handleScanWebCam}
-                         />
-                         <h3>Scanned By WebCam Code: {scanResultWebCam}</h3>
                       </Grid>
                   </Grid>
               </CardContent>
